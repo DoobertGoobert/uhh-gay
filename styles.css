@@ -1,4 +1,4 @@
-/* Reset default margin and padding */
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,31 +6,76 @@
 }
 
 body {
-    background: linear-gradient(to right, #1f1c2c, #928dab);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background: radial-gradient(ellipse at top, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: white;
+    overflow: hidden;
 }
 
-.container {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 40px 60px;
+/* Neon frame container */
+.neon-frame {
+    background-color: rgba(20, 20, 30, 0.7);
+    border: 3px solid #00ffff;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    padding: 40px 60px;
     text-align: center;
+    box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff, 0 0 60px #00f0ff;
+    position: relative;
+    z-index: 1;
     transition: transform 0.3s ease;
 }
 
-.container:hover {
-    transform: scale(1.02);
+.neon-frame:hover {
+    transform: scale(1.03);
 }
 
+/* Heading style */
 h1 {
     font-size: 48px;
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background: linear-gradient(to right, #00f0ff, #ff00cc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
 }
+
+/* Subtitle */
+p {
+    font-size: 20px;
+    color: #ddd;
+}
+
+/* Decorative glow ring */
+.glow-ring {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 40px #ff00cc, 0 0 80px #00f0ff, 0 0 120px #ff00cc;
+    z-index: 0;
+    opacity: 0.15;
+    animation: pulse 4s infinite ease-in-out;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.25;
+    }
+}
+
+/* Optional font from Google Fonts (add to HTML if you want) */
+/* Paste this inside <head> if using Orbitron font:
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+*/
