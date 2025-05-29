@@ -75,7 +75,29 @@ p {
     }
 }
 
-/* Optional font from Google Fonts (add to HTML if you want) */
-/* Paste this inside <head> if using Orbitron font:
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-*/
+/* Easter egg message style */
+#money-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #00ff99;
+    color: #004d00;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99;
+    text-align: center;
+    z-index: 9999;
+    transition: transform 0.4s ease;
+    user-select: none;
+}
+
+#money-message.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hidden {
+    display: none;
+}
