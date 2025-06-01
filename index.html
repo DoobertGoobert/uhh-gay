@@ -2,34 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Expok</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Expok / My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/main.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>GENNESIS AND MEN</h1>
-    <p>Developer | Designer | Creator</p>
-    
-    <div class="skills">
-      <h2>Languages I Use:</h2>
-      <ul>
-        <li>Python</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>C#</li>
-      </ul>
-    </div>
 
-    <div class="links">
-      <a href="https://github.com/DoobertGoobert" target="_blank">GitHub</a>
-      <a href="discord.gg/Byteshift" target="_blank">Discord</a>
-      <!-- Add more if you want -->
-    </div>
-  </div>
+  <audio id="bg-music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-  <script src="script.js"></script>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="info.html">Info</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1 id="glitch-title">Expok</h1>
+    <p>Hi! I'm Expok, a passionate young developer skilled in Python, C#, and web development. Welcome to my portfolio website!</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Expok — <a href="https://github.com/devok" target="_blank" rel="noopener">GitHub</a>
+  </footer>
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>
