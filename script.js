@@ -1,35 +1,16 @@
-const secretCode = "genesis";
+// Easter Egg: Type "expok" to redirect to breadfinancial.com
+const secretCode = "expok";
 let inputBuffer = "";
 
-const message = document.getElementById("money-message");
-
 window.addEventListener("keydown", (e) => {
-  // Add typed key to buffer (lowercase)
   inputBuffer += e.key.toLowerCase();
 
-  // Keep buffer length same as secretCode length
+  // Keep the buffer trimmed to match secret length
   if (inputBuffer.length > secretCode.length) {
     inputBuffer = inputBuffer.slice(-secretCode.length);
   }
 
-  // Check if buffer matches secret code
   if (inputBuffer === secretCode) {
-    showMoneyMessage();
-    inputBuffer = ""; // reset buffer after success
+    window.location.href = "https://www.breadfinancial.com/";
   }
 });
-
-function showMoneyMessage() {
-  message.classList.remove("hidden");
-  setTimeout(() => {
-    message.classList.add("show");
-  }, 10);
-
-  // Hide after 3 seconds
-  setTimeout(() => {
-    message.classList.remove("show");
-    setTimeout(() => {
-      message.classList.add("hidden");
-    }, 400);
-  }, 3000);
-}
