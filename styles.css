@@ -7,7 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 }
 
@@ -16,6 +16,8 @@ body {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+  max-width: 600px;
+  width: 90%;
 }
 
 h1 {
@@ -28,9 +30,24 @@ p {
   margin-bottom: 20px;
 }
 
+.skills h2 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+.skills li {
+  margin: 5px 0;
+}
+
 .links a {
   display: inline-block;
-  margin: 0 10px;
+  margin: 10px;
   color: #00ffff;
   text-decoration: none;
   border: 2px solid #00ffff;
