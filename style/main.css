@@ -1,4 +1,4 @@
-/* Reset and base */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +7,8 @@
 }
 
 body {
-  background: #121212;
-  color: #ddd;
+  background: #111;
+  color: #e0e0e0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ body {
 }
 
 a {
-  color: #ff6f61;
+  color: #9b59b6;
   text-decoration: none;
 }
 
@@ -27,9 +27,9 @@ a:hover {
 
 /* Navbar */
 .navbar {
-  background-color: #1f1f1f;
+  background-color: #1a1a1a;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 8px rgba(255, 111, 97, 0.3);
+  box-shadow: 0 2px 8px rgba(155, 89, 182, 0.3);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -52,11 +52,11 @@ a:hover {
 
 .navbar a:hover,
 .navbar a.active {
-  background-color: #ff6f61;
+  background-color: #9b59b6;
   color: #121212;
 }
 
-/* Hero Sections */
+/* Hero Section */
 .hero {
   max-width: 900px;
   margin: 6rem auto 4rem auto;
@@ -67,18 +67,17 @@ a:hover {
 #glitch-title {
   font-size: 4rem;
   font-weight: 900;
-  color: #ff6f61;
+  color: #9b59b6;
   text-shadow:
-    0 0 8px #ff6f61,
-    0 0 15px #ff6f61,
-    2px 2px 0 #ff3a2f,
-    -2px -2px 0 #ff3a2f;
+    0 0 8px #9b59b6,
+    0 0 15px #9b59b6,
+    2px 2px 0 #8e44ad,
+    -2px -2px 0 #8e44ad;
   user-select: none;
   margin-bottom: 2rem;
 }
 
-/* Projects Page */
-
+/* Projects */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -88,10 +87,10 @@ a:hover {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  border: 1px solid #ff6f61cc;
+  border: 1px solid #9b59b6cc;
   padding: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: default;
@@ -99,13 +98,13 @@ a:hover {
 
 .project-card:hover {
   transform: scale(1.03);
-  border-color: #ff6f61;
-  box-shadow: 0 0 15px #ff6f61cc;
+  border-color: #9b59b6;
+  box-shadow: 0 0 15px #9b59b6cc;
 }
 
 .project-card h2 {
   margin-bottom: 0.7rem;
-  color: #ff6f61;
+  color: #9b59b6;
   font-size: 1.5rem;
 }
 
@@ -119,23 +118,22 @@ a:hover {
   color: #aaa;
 }
 
-/* Contact Page */
-
+/* Contact */
 .contact-form {
   max-width: 500px;
   margin: 3rem auto;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  border: 1px solid #ff6f61cc;
+  border: 1px solid #9b59b6cc;
 }
 
 .contact-form label {
   display: block;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
-  color: #ff6f61;
+  color: #9b59b6;
   font-weight: 600;
 }
 
@@ -158,7 +156,7 @@ a:hover {
 .contact-form button {
   margin-top: 1.4rem;
   padding: 0.8rem 1.2rem;
-  background-color: #ff6f61;
+  background-color: #9b59b6;
   color: #121212;
   font-weight: 700;
   border: none;
@@ -169,11 +167,10 @@ a:hover {
 }
 
 .contact-form button:hover {
-  background-color: #ff3a2f;
+  background-color: #8e44ad;
 }
 
 /* Info Page */
-
 .info-hero {
   max-width: 900px;
   margin: 6rem auto 4rem auto;
@@ -195,8 +192,8 @@ a:hover {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 20px #ff6f61aa;
-  border: 2px solid #ff6f61;
+  box-shadow: 0 0 20px #9b59b6aa;
+  border: 2px solid #9b59b6;
 }
 
 .info-text {
@@ -207,7 +204,7 @@ a:hover {
 
 .info-text h2,
 .info-text h3 {
-  color: #ff6f61;
+  color: #9b59b6;
   margin-bottom: 0.5rem;
 }
 
@@ -237,13 +234,13 @@ footer {
   text-align: center;
   padding: 2rem 0;
   font-size: 0.9rem;
-  color: #666;
-  background-color: #1f1f1f;
+  color: #999;
+  background-color: #1a1a1a;
   margin-top: auto;
 }
 
 footer a {
-  color: #ff6f61;
+  color: #9b59b6;
   font-weight: 600;
 }
 
