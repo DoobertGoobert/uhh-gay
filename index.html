@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Forest / Kl1kzz</title>
-  <link rel="stylesheet" href="styleshih.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -61,9 +61,8 @@
     <p>© 2025 expok.xyz — Nature.</p>
   </footer>
 
-  <input id="easterEgg" placeholder="Type here..." />
-
   <script>
+    // Load GitHub Projects
     fetch(`https://api.github.com/users/DoobertGoobert/repos?sort=updated&per_page=6`)
       .then(response => response.json())
       .then(repos => {
@@ -80,7 +79,7 @@
       })
       .catch(error => console.error("GitHub API error:", error));
 
-
+    // Easter egg redirect via typed keys
     let typed = "";
     document.addEventListener("keydown", (e) => {
       if (e.key.length === 1) {
@@ -90,18 +89,7 @@
         }
         if (typed.length > 20) typed = typed.slice(-20);
       }
-    })
-    document.getElementById("easterEgg").addEventListener("keydown", e => {
-      if (e.key === "Enter") {
-        const val = e.target.value.trim().toLowerCase();
-        if (val === "gennesis") {
-          window.location.href = "https://gennesis.cc";
-        } else {
-          alert("Unknown command: " + val);
-        }
-      }
     });
   </script>
 </body>
 </html>
-
